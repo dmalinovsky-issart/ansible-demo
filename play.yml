@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+      - include_vars:
+          file: secured_variables.yml
+      - debug:
+          msg: "This is a very very secure message: {{ secured_variable }}"
